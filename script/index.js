@@ -419,7 +419,6 @@ function main() {
         if (isPlayed && ++count >= limit) {
             count = 0;
             curr = shuffleAudio(len, curr);
-            count = 0;
         }
     };
 
