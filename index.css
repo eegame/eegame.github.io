@@ -100,7 +100,7 @@ html, body {
 }
 
 #bubble {
-    position: relative;
+    position: fixed;
     z-index: 90;
     left: 142px;
     top: 242px;
@@ -114,13 +114,13 @@ html, body {
 }
 
 #view {
-    position: absolute;
+    position: fixed;
     left: 10px;
     top: 10px;
 }
 
 #note {
-    position: absolute;
+    position: fixed;
     left: 30px;
     top: 264px;
     line-height: 40px;
