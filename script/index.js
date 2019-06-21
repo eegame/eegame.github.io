@@ -192,18 +192,18 @@ function waterRipple(element, settings) {
         map_index = old_index;
 
         // 使用局部变量优化全局作用域查询
-        var _map_index = map_index,
-            _width = width,
+        var _width = width,
             _height = height,
             _half_width = half_width,
             _half_height = half_height,
+            _attenuation = attenuation,
+            _maxAmplitude = maxAmplitude,
+            _new_index = new_index,
+            _map_index = map_index,
             _ripple_map = ripple_map,
             _last_map = last_map,
             _ripple_data = ripple.data,
-            _texture_data = texture.data,
-            _new_index = new_index,
-            _attenuation = attenuation,
-            _maxAmplitude = maxAmplitude;
+            _texture_data = texture.data;
 
         // 渲染所有像素点
         for (var y = 0; y < _height; y++) {
