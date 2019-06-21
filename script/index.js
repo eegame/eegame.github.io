@@ -206,7 +206,7 @@ function waterRipple(element, settings) {
             _maxAmplitude = maxAmplitude;
 
         // 渲染所有像素点
-        for (var y = 0; y < height; y++) {
+        for (var y = 0; y < _height; y++) {
             for (var x = 0; x < _width; x++) {
                 var x_boundary = 0, judge = _map_index % _width;
 
@@ -256,7 +256,7 @@ function waterRipple(element, settings) {
                     }
 
                     pixel_source = i * 4;
-                    pixel_deviation = (deviation_x + (deviation_y * width)) * 4;
+                    pixel_deviation = (deviation_x + (deviation_y * _width)) * 4;
 
                     // 移动像素的RGBA信息
                     _ripple_data[pixel_source] = _texture_data[pixel_deviation];
