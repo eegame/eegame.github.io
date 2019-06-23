@@ -161,7 +161,7 @@ function waterRipple(element, settings) {
 
     // 在指定地点产生波源
     function disturb(circleX, circleY) {
-        // 将值向下取整
+        // 向下取整
         circleX <<= 0;
         circleY <<= 0;
 
