@@ -25,8 +25,8 @@ function animateElement(element, settings) {
 }
 
 function typing(note) {
-    var s = "🦌🦌——夏天来了。不知道你最近怎么样。有没有被热醒过。我记得你喜欢雨天湿润的感觉。可加州的天总是不配合。那我在这里给你造一片雨出来。想玩水的话就撩撩屏幕吧。想听点别的就使劲戳。盼你风雨过后见彩虹。🌈",
-        n = s.length, i = -1, l = [6, 11, 21, 29, 43, 54, 68, 80, 90, n];
+    var s = "🦌🦌——愿你天天开心。🌈",
+        n = s.length, i = -1, l = [6, n];
 
     typingTimer = setInterval(function () {
         if (++i < n) {
