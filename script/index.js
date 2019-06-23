@@ -306,7 +306,6 @@ function waterRipple(element, settings) {
 }
 
 function main() {
-    // div
     var divPop = document.getElementById("pop"),
         divRain = document.getElementById("rain"),
         divSea = document.getElementById("sea"),
@@ -321,14 +320,12 @@ function main() {
         divView = document.getElementById("view"),
         divNote = document.getElementById("note");
 
-    // params for waterRipple
     var settings = {
         image: "image/background.png",
         width: 340,
         height: 544
     };
 
-    // init
     var playlist = [divRain, divSea, divAncientry, divPast, divTime, divSkyline, divStars, divTravel, divBeethoven],
         len = playlist.length, curr = 0, count = 0, limit = 4,
         isClicked = false, isPlayed = false,
@@ -381,7 +378,6 @@ function main() {
 
     animateElement($("#bubble"), settings);
 
-    // on click
     divBubble.onclick = function () {
         explodeTimer = setInterval(function () {
             if (!isClicked) {
@@ -423,12 +419,10 @@ function main() {
         }
     };
 
-    // on mousemove
     divView.onmousemove = function (e) {
         waterRippleEffect.disturb(e.layerX, e.layerY);
     };
 
-    // on touchmove
     divView.ontouchmove = function (e) {
         waterRippleEffect.disturb(e.layerX, e.layerY);
     };
