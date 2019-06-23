@@ -317,8 +317,8 @@ function main() {
         divTravel = document.getElementById("travel"),
         divBeethoven = document.getElementById("beethoven"),
         divBubble = document.getElementById("bubble"),
-        divView = document.getElementById("view"),
-        divNote = document.getElementById("note");
+        divNote = document.getElementById("note"),
+        divView = document.getElementById("view");
 
     var settings = {
         image: "image/background.png",
