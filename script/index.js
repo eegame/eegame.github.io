@@ -159,7 +159,7 @@ function waterRipple(element, settings) {
         renderRipple();
     }
 
-    // 在指定地点产生波源
+    // 在指定位置产生波源
     function disturb(circleX, circleY) {
         // 向下取整
         circleX <<= 0;
@@ -202,8 +202,8 @@ function waterRipple(element, settings) {
             _map_index = map_index,
             _ripple_map = ripple_map,
             _last_map = last_map,
-            _ripple_data = ripple.data,
-            _texture_data = texture.data;
+            _texture_data = texture.data,
+            _ripple_data = ripple.data;
 
         // 渲染所有像素点
         for (var y = 0; y < _height; y++) {
