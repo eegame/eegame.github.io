@@ -225,7 +225,7 @@ function waterRipple(element, settings) {
                 // 计算当前像素点下一时刻的振幅
                 var amplitude = (top + bottom + left + right) >> 1;
                 amplitude -= _ripple_map[_new_index + i];
-                amplitude -= amplitude >> _attenuation; // 计算衰减
+                amplitude -= amplitude >> _attenuation;
 
                 // 更新振幅数组
                 _ripple_map[_new_index + i] = amplitude;
@@ -292,7 +292,7 @@ function waterRipple(element, settings) {
         var amplitude = top + bottom + left + right;
         amplitude >>= 1;
         amplitude -= old_amplitude;
-        amplitude -= amplitude >> attenuation; // 计算衰减
+        amplitude -= amplitude >> attenuation;
 
         return amplitude;
     }
