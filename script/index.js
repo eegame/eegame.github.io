@@ -178,8 +178,8 @@ function waterRipple(element, settings) {
     // 渲染下一帧
     function renderRipple() {
         var i = old_index,
-            deviation_x, // x水平方向偏移
-            deviation_y, // y竖直方向偏移
+            deviation_x, // 水平方向偏移
+            deviation_y, // 竖直方向偏移
             pixel_source, // 原始ImageData对象像素索引
             pixel_deviation; // 偏移后的ImageData对象像素索引
 
