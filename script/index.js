@@ -289,8 +289,7 @@ function waterRipple(element, settings) {
             right = x_boundary != 2 ? ripple_map[index + 1] : 0; // 右边相邻点
 
         // 计算当前像素点下一时刻的振幅
-        var amplitude = top + bottom + left + right;
-        amplitude >>= 1;
+        var amplitude = (top + bottom + left + right) >> 1;
         amplitude -= old_amplitude;
         amplitude -= amplitude >> attenuation;
 
@@ -317,8 +316,8 @@ function main() {
         divTravel = document.getElementById("travel"),
         divBeethoven = document.getElementById("beethoven"),
         divBubble = document.getElementById("bubble"),
-        divNote = document.getElementById("note"),
-        divView = document.getElementById("view");
+        divView = document.getElementById("view"),
+        divNote = document.getElementById("note");
 
     var settings = {
         image: "image/background.png",

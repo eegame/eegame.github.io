@@ -113,6 +113,12 @@ html, body {
     -webkit-animation-duration: 5s;
 }
 
+#view {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
 #note {
     position: fixed;
     left: 30px;
@@ -121,10 +127,4 @@ html, body {
     text-align: left;
     font-size: 20px;
     font-weight: 900;
-}
-
-#view {
-    position: fixed;
-    left: 10px;
-    top: 10px;
 }
