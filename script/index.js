@@ -1,4 +1,4 @@
-function getPos(element, settings) {
+function calcPos(element, settings) {
     var x = Math.ceil(Math.random() * (settings.width - element.width() * 1.5 - 80)) + 50,
         y = Math.ceil(Math.random() * (settings.height - element.height() * 1.5 - 80)) + 50;
 
@@ -16,7 +16,7 @@ function calcSpeed(curr, next) {
 
 function animateElement(element, settings) {
     var curr = element.offset(),
-        next = getPos(element, settings),
+        next = calcPos(element, settings),
         speed = calcSpeed([curr.left, curr.top], next);
 
     element.animate({left: next[0], top: next[1]}, speed, function () {
