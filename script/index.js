@@ -312,6 +312,7 @@ function main() {
         divSea = document.getElementById("sea"),
         divAncientry = document.getElementById("ancientry"),
         divPast = document.getElementById("past"),
+        divTime = document.getElementById("time"),
         divSkyline = document.getElementById("skyline"),
         divStars = document.getElementById("stars"),
         divTravel = document.getElementById("travel"),
@@ -328,7 +329,7 @@ function main() {
     };
 
     // init
-    var playlist = [divRain, divSea, divAncientry, divPast, divSkyline, divStars, divTravel, divBeethoven],
+    var playlist = [divRain, divSea, divAncientry, divPast, divTime, divSkyline, divStars, divTravel, divBeethoven],
         len = playlist.length, curr = 0, count = 0, limit = 4,
         isClicked = false, isPlayed = false,
         waterRippleEffect = new waterRipple(divView, settings);
