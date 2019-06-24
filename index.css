@@ -84,35 +84,6 @@ html, body {
     font-family: monospace;
 }
 
-@keyframes scaleDraw {
-    0% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.5);
-    }
-    50% {
-        transform: scale(1);
-    }
-    75% {
-        transform: scale(1.5);
-    }
-}
-
-#bubble {
-    position: fixed;
-    z-index: 90;
-    left: 142px;
-    top: 242px;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    -webkit-animation-name: scaleDraw;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 5s;
-}
-
 #view {
     position: fixed;
     left: 10px;
@@ -127,4 +98,32 @@ html, body {
     text-align: left;
     font-size: 20px;
     font-weight: 900;
+}
+
+#bubble {
+    position: fixed;
+    left: 142px;
+    top: 242px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    -webkit-animation-name: scaleDraw;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 5s;
+}
+
+@keyframes scaleDraw {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.5);
+    }
 }
