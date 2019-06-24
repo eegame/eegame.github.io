@@ -305,6 +305,12 @@ function waterRipple(element, settings) {
 }
 
 function main() {
+    var settings = {
+        image: "image/background.png",
+        width: 340,
+        height: 544
+    };
+
     var divView = document.getElementById("view"),
         divNote = document.getElementById("note"),
         divBubble = document.getElementById("bubble"),
@@ -318,12 +324,6 @@ function main() {
         divStars = document.getElementById("stars"),
         divTravel = document.getElementById("travel"),
         divBeethoven = document.getElementById("beethoven");
-
-    var settings = {
-        image: "image/background.png",
-        width: 340,
-        height: 544
-    };
 
     var playlist = [divRain, divSea, divAncientry, divPast, divTime, divSkyline, divStars, divTravel, divBeethoven],
         len = playlist.length, curr = 0, count = 0, limit = 4,
