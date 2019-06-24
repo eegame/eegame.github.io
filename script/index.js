@@ -72,7 +72,7 @@ function waterRipple(element, settings) {
 
     // 检测背景图
     if (!settings.image.length) {
-        return false;
+        return null;
     }
 
     var image,
