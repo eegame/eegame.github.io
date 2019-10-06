@@ -313,7 +313,7 @@ function main() {
 
     var divView = document.getElementById("view"),
         divNote = document.getElementById("note"),
-        divBubble = document.getElementById("bubble"),
+        divButton = document.getElementById("button"),
         divPop = document.getElementById("pop"),
         divRain = document.getElementById("rain"),
         divSea = document.getElementById("sea"),
@@ -375,9 +375,9 @@ function main() {
         return next;
     }
 
-    animateElement($("#bubble"), settings);
+    animateElement($("#button"), settings);
 
-    divBubble.onclick = function () {
+    divButton.onclick = function () {
         explodeTimer = setInterval(function () {
             if (!isClicked) {
                 isClicked = true;
@@ -396,7 +396,7 @@ function main() {
                 });
             }
             else {
-                divBubble.remove();
+                divButton.remove();
                 clearInterval(explodeTimer);
             }
         }, 250);
