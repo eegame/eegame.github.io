@@ -101,7 +101,6 @@ function waterRipple(element, settings) {
     element.appendChild(canvas);
 
     var ctx = canvas.getContext("2d");
-    ctx.fillStyle = settings.bgColor;
     ctx.fillRect(0, 0, width, height);
 
     window.requestAnimationFrame = (function () {
