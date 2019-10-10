@@ -53,6 +53,8 @@ function waterRipple(element, settings) {
     // 默认设置
     var defaults = {
         image: "",
+        left: 0,
+        top: 0,
         width: 320,
         height: 320,
         dropRadius: 4,
