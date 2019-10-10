@@ -380,7 +380,7 @@ function main() {
         explodeTimer = setInterval(function () {
             if (!isClicked) {
                 isClicked = true;
-                $("img").explode({
+                $("#bubble").explode({
                     maxWidth: 12,
                     minWidth: 4,
                     maxAngle: 360,
