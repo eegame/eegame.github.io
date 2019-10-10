@@ -1,6 +1,7 @@
 function calcPos(element, settings) {
-    var x = Math.ceil(Math.random() * (settings.width - element.width() * 1.5 - 80)) + settings.left + 40,
-        y = Math.ceil(Math.random() * (settings.height - element.height() * 1.5 - 80)) + settings.top + 40;
+    var margin = 40,
+        x = Math.ceil(Math.random() * (settings.width - element.width() * 1.5 - margin * 2)) + settings.left + margin,
+        y = Math.ceil(Math.random() * (settings.height - element.height() * 1.5 - margin * 2)) + settings.top + margin;
 
     return [x, y];
 }
