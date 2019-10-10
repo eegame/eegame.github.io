@@ -1,6 +1,6 @@
 function calcPos(element, settings) {
-    var x = Math.ceil(Math.random() * (settings.width - element.width() * 1.5 - 80)) + 50,
-        y = Math.ceil(Math.random() * (settings.height - element.height() * 1.5 - 80)) + 50;
+    var x = Math.ceil(Math.random() * (settings.width - element.width() * 1.5 - 80)) + 40 + settings.left,
+        y = Math.ceil(Math.random() * (settings.height - element.height() * 1.5 - 80)) + 40 + settings.top;
 
     return [x, y];
 }
@@ -306,6 +306,8 @@ function waterRipple(element, settings) {
 function main() {
     var settings = {
         image: "image/background.png",
+        left: 10,
+        top: 10,
         width: 340,
         height: 544
     };
