@@ -67,9 +67,9 @@ function waterRipple(element, settings) {
     };
 
     // 合并设置
-    for (var item in defaults) {
-        if (!settings.hasOwnProperty(item)) {
-            settings[item] = defaults[item];
+    for (var x in defaults) {
+        if (!settings.hasOwnProperty(x)) {
+            settings[x] = defaults[x];
         }
     }
 
