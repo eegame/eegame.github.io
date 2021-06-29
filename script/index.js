@@ -207,7 +207,7 @@ function waterRipple(element, settings) {
             _texture_data = texture.data,
             _ripple_data = ripple.data;
 
-        // 渲染所有像素点
+        // 渲染所有像素
         for (var y = 0; y < _height; y++) {
             for (var x = 0; x < _width; x++) {
                 var x_boundary = 0, judge = _map_index % _width;
@@ -224,7 +224,7 @@ function waterRipple(element, settings) {
                     left = x_boundary != 1 ? _ripple_map[_map_index - 1] : 0, // 左边相邻点
                     right = x_boundary != 2 ? _ripple_map[_map_index + 1] : 0; // 右边相邻点
 
-                // 计算当前像素点下一时刻的振幅
+                // 计算当前像素下一时刻的振幅
                 var amplitude = (top + bottom + left + right) >> 1;
                 amplitude -= _ripple_map[_new_index + i];
                 amplitude -= amplitude >> _attenuation;
@@ -290,7 +290,7 @@ function waterRipple(element, settings) {
             left = x_boundary != 1 ? ripple_map[index - 1] : 0, // 左边相邻点
             right = x_boundary != 2 ? ripple_map[index + 1] : 0; // 右边相邻点
 
-        // 计算当前像素点下一时刻的振幅
+        // 计算当前像素下一时刻的振幅
         var amplitude = (top + bottom + left + right) >> 1;
         amplitude -= old_amplitude;
         amplitude -= amplitude >> attenuation;
