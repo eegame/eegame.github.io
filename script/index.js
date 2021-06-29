@@ -25,8 +25,8 @@ function animateElement(element, settings) {
 }
 
 function typing(note) {
-    var s = "🦌🦌——愿你天天开心。🌈",
-        n = s.length, i = -1, l = [0, 6, n];
+    var s = "Hello 2021!🌈",
+        n = s.length, i = -1, l = [0, n];
 
     typingTimer = setInterval(function () {
         if (++i < n) {
