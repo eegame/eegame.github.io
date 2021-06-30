@@ -387,8 +387,8 @@ function main() {
             if (!isClicked) {
                 isClicked = true;
                 $("#bubble").explode({
-                    maxWidth: 12,
                     minWidth: 4,
+                    maxWidth: 12,
                     maxAngle: 360,
                     radius: 480,
                     explodeTime: 250,
