@@ -219,13 +219,13 @@ function waterRipple(element, settings) {
                     x_boundary = 2; // 右边边界
                 }
 
-                var top = _ripple_map[_map_index - _width], // 上边相邻点
-                    bottom = _ripple_map[_map_index + _width], // 下边相邻点
-                    left = x_boundary != 1 ? _ripple_map[_map_index - 1] : 0, // 左边相邻点
-                    right = x_boundary != 2 ? _ripple_map[_map_index + 1] : 0; // 右边相邻点
+                var left = x_boundary != 1 ? _ripple_map[_map_index - 1] : 0, // 左边相邻点
+                    right = x_boundary != 2 ? _ripple_map[_map_index + 1] : 0, // 右边相邻点
+                    top = _ripple_map[_map_index - _width], // 上边相邻点
+                    bottom = _ripple_map[_map_index + _width]; // 下边相邻点
 
                 // 计算当前像素下一时刻的振幅
-                var amplitude = (top + bottom + left + right) >> 1;
+                var amplitude = (left + right + top + bottom) >> 1;
                 amplitude -= _ripple_map[_new_index + i];
                 amplitude -= amplitude >> _attenuation;
 
@@ -285,13 +285,13 @@ function waterRipple(element, settings) {
             x_boundary = 2; // 右边边界
         }
 
-        var top = ripple_map[index - width], // 上边相邻点
-            bottom = ripple_map[index + width], // 下边相邻点
-            left = x_boundary != 1 ? ripple_map[index - 1] : 0, // 左边相邻点
-            right = x_boundary != 2 ? ripple_map[index + 1] : 0; // 右边相邻点
+        var left = x_boundary != 1 ? ripple_map[index - 1] : 0, // 左边相邻点
+            right = x_boundary != 2 ? ripple_map[index + 1] : 0, // 右边相邻点
+            top = ripple_map[index - width], // 上边相邻点
+            bottom = ripple_map[index + width]; // 下边相邻点
 
         // 计算当前像素下一时刻的振幅
-        var amplitude = (top + bottom + left + right) >> 1;
+        var amplitude = (left + right + top + bottom) >> 1;
         amplitude -= old_amplitude;
         amplitude -= amplitude >> attenuation;
 
@@ -331,7 +331,7 @@ function main() {
         divBeethoven = document.getElementById("beethoven");
 
     var playlist = [divRain, divSea, divAncientry, divPast, divTime, divSkyline, divStars, divTravel, divBeethoven],
-        len = playlist.length, curr = 0, count = 0, limit = 4,
+        len = playlist.length, curr = 0, cnt = 0, lmt = 4,
         isClicked = false, isPlayed = false,
         waterRippleEffect = new waterRipple(divView, settings);
 
@@ -417,8 +417,8 @@ function main() {
     divView.onclick = function (e) {
         waterRippleEffect.disturb(e.layerX, e.layerY);
 
-        if (isPlayed && ++count >= limit) {
-            count = 0;
+        if (isPlayed && ++cnt >= lmt) {
+            cnt = 0;
             curr = shuffleAudio(len, curr);
         }
     };
